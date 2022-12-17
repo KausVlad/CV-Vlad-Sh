@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="icon" type="image/x-icon" href="/images/forms.png" />
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    .contact-inf {
+      margin-bottom: 20px;
+    }
+    .contact-form {
+      display: table-row;
+    }
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      display: table-cell;
+      margin-bottom: 10px;
+      vertical-align: top;
+    }
+    .contact-form label {
+      padding-right: 10px;
+    }
+    .required {
+      color: red;
+    }
+  </style>
+  <body>
+    <a href="/index.html">Go to ➡ Main page </a>
+    <h1>Hire me</h1>
+    <h3>Contact information</h3>
+    <table class="contact-inf">
+      <tbody>
+        <tr>
+          <th>Phone</th>
+          <td>+380985759114 (not real)</td>
+        </tr>
+        <tr>
+          <th>Adders</th>
+          <td>Somewhere in Uganda (absolute true)</td>
+        </tr>
+      </tbody>
+    </table>
+    <form action="/Forms-HW6.html" method="get">
+      <fieldset>
+        <legend>Contact form</legend>
+        <div class="contact-form">
+          <label for="email">E-mail<span class="required">*</span>:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Enter the email!"
+          />
+        </div>
+        <div class="contact-form">
+          <label for="description">Description:</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="21"
+            rows="6"
+          ></textarea>
+        </div>
+        <div class="contact-form">
+          <label for="work-type">Work Type:</label>
+          <select name="work-type" id="work-type">
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Seasonal">Seasonal</option>
+            <option value="Temporary">Temporary</option>
+            <option value="Interns">Interns</option>
+            <option value="At-will">At-will</option>
+          </select>
+        </div>
+        <div class="contact-form"><input type="submit" value="Hire me" /></div>
+      </fieldset>
+    </form>
+  </body>
+</html>
