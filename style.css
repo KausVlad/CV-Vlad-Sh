@@ -36,8 +36,8 @@ h3 {
 .personal-photo {
   object-fit: cover;
   object-position: left;
-  height: 100px;
-  width: 100px;
+  height: 124px;
+  width: 124px;
   border: 2px solid #dee2e6;
   padding: 10px;
 }
