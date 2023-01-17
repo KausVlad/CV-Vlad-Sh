@@ -113,7 +113,7 @@ ol {
 .left-bar {
   flex-basis: 30%;
   background-color: #86a3b4;
-  border-right: 2px solid black;
+  border-right: 1px solid black;
   color: var(--main-color);
 }
 .margin-left-40px {
@@ -144,6 +144,7 @@ ol {
 
 a:link {
   text-decoration: none;
+  color: var(--left-bar-link-color-default);
 }
 a:link:hover {
   text-decoration: underline;
