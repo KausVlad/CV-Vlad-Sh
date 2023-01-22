@@ -90,7 +90,8 @@ textarea {
   overflow-wrap: break-word;
 }
 select {
-  background: url('/images/mdi_arrow_drop_down.svg') no-repeat center right 12px,
+  background: url('../images/mdi_arrow_drop_down.svg') no-repeat center right
+      12px,
     #f8fafc;
 }
 
