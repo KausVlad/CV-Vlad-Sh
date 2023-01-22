@@ -111,10 +111,17 @@ ol {
   font-weight: 600;
 }
 .left-bar {
+  overflow-y: scroll;
+  position: sticky;
+  top: 0px;
+  height: 100vh;
   flex-basis: 30%;
   background-color: #86a3b4;
   border-right: 1px solid black;
   color: var(--main-color);
+}
+.left-bar::-webkit-scrollbar {
+  display: none;
 }
 .margin-left-40px {
   margin-left: 40px;
@@ -185,6 +192,7 @@ a:link:hover {
 }
 
 .content {
+  flex-basis: 70%;
   margin: 0 40px;
   width: 100%;
   min-width: 320px;

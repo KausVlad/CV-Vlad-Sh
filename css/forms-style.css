@@ -4,8 +4,12 @@
   --grey3: #b8bcca;
 }
 .container {
-  max-width: 1024px;
-  margin: 0 auto;
+  width: 1024px;
+  /* max-width: 1024px; */
+  position: fixed;
+  top: calc(50% - 425px);
+  left: calc(50% - 512px);
+  /* margin: 0 auto; */
   font-family: 'IBM Plex Sans', sans-serif;
   color: var(--basic);
 }
