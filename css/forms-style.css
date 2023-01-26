@@ -8,6 +8,7 @@
   margin: 0 auto;
   font-family: 'IBM Plex Sans', sans-serif;
   color: var(--basic);
+  padding: 16px;
 }
 .href-to-main:hover {
   cursor: pointer;
@@ -118,4 +119,23 @@ select:focus,
 textarea:focus {
   outline: 1px solid #0048d9;
   border-radius: 4px;
+}
+input[type='email']:required:invalid:focus {
+  outline: 1px solid red;
+}
+input[type='email']:required:invalid:focus + .error {
+  display: block;
+}
+.error {
+  margin-top: 2px;
+  position: absolute;
+  display: none;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+  /* System/Red */
+  color: #ed0131;
 }
