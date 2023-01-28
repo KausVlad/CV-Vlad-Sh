@@ -4,21 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>CV Vladyslav Shkarivskyi</title>
-    <link rel="icon" type="image/x-icon" href="./images/6614677.png" />
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/my-theme.css" />
+    <title>Document</title>
   </head>
-  <body class="main-theme">
+  <style>
+    .container {
+      margin: 0 auto;
+      display: flex;
+      /* flex-direction: column; */
+      max-width: 1000px;
+      height: 100vh;
+      background-color: aqua;
+    }
+    .left {
+      min-width: 300px;
+      /* overflow-y: scroll; */
+      /* flex: 2 2 360px; */
+      position: sticky;
+      top: 0px;
+      height: 100vh;
+      flex-basis: 400px;
+      border-right: 4px solid black;
+      background-color: blue;
+      
+      /* flex-basis: 300px; */
+    }
+    .right {
+      /* flex-basis: auto; */
+      /* flex: 1 1 auto; */
+      /* margin: 0 40px; */
+      /* width: 100%; */
+      /* min-width: 320px; */
+      background-color: brown;
+    }
+    /* @media screen and (max-width: 701px) {
+      .container {
+        flex-direction: column;
+      }
+      .left {
+        position: static;
+        width: 100vw;
+      }
+    } */
+  </style>
+  <body>
     <div class="container">
-      <div class="left-bar">
+      <div class="left">
         <input id="toggle" type="checkbox" />
-        <h1 class="margin-left save-margin-right">
+        <h1 class="margin-left-40px save-margin-right">
           <span class="name">Vladyslav</span>
           <span class="surname">Shkarivskyi</span>
         </h1>
@@ -28,8 +61,8 @@
           alt="personal photo"
         />
 
-        <h2 class="margin-left save-margin-right">Contact</h2>
-        <ul class="contact-inf margin-left save-margin-right">
+        <h2 class="margin-left-40px save-margin-right">Contact</h2>
+        <ul class="contact-inf margin-left-40px save-margin-right">
           <li>
             <h3>Address</h3>
             <p>Kyiv, Ukraine</p>
@@ -53,14 +86,13 @@
             <a class="form-href" href="./Forms-HW6.html">Hire ➡ Me </a>
           </li>
         </ul>
-        <h2 class="margin-left save-margin-right">Languages</h2>
-        <ul class="languages margin-left save-margin-right">
+        <h2 class="margin-left-40px save-margin-right">Languages</h2>
+        <ul class="languages margin-left-40px save-margin-right">
           <li>Ukrainian - C2</li>
           <li>English - B1</li>
         </ul>
       </div>
-      <div class="content">
-        <h2 class="margin-top-58px">Summary</h2>
+      <div class="right"><h2 class="margin-top-58px">Summary</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
           nesciunt doloribus vel, cupiditate exercitationem corporis, beatae
@@ -111,8 +143,7 @@
           voluptatum hic? Ullam, provident numquam!m nulla fugit in delectus
           incidunt deleniti odio voluptatum hic? Ullam, provident numquam!
         </p>
-      </div>
+      </div></div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>

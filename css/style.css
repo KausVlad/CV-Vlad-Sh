@@ -25,23 +25,26 @@
   font-weight: 600;
 }
 .left-bar {
+  min-width: 300px;
   overflow-y: scroll;
   position: sticky;
   top: 0px;
   height: 100vh;
-  flex-basis: 30%;
   background-color: var(--color-left-bar-background);
-  border-right: 1px solid black;
   color: var(--color-main);
 }
+.content {
+  margin: 0 32px;
+}
+
 .left-bar::-webkit-scrollbar {
   display: none;
 }
-.margin-left-40px {
-  margin-left: 40px;
+.margin-left {
+  margin-left: 32px;
 }
 .save-margin-right {
-  margin-right: 40px;
+  margin-right: 32px;
 }
 .margin-top-58px {
   margin-top: 58px;
@@ -134,12 +137,8 @@ a:link:hover {
   line-height: 24px;
   margin-bottom: 15px;
 }
-
-.content {
-  flex-basis: 70%;
-  margin: 0 40px;
-  width: 100%;
-  min-width: 320px;
+.languages li:last-child {
+  margin-bottom: 60px;
 }
 
 .content h2 {
@@ -176,4 +175,14 @@ p {
 .experience span,
 .education span {
   font-weight: 600;
+  flex-direction: column;
+}
+@media screen and (max-width: 606px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-bar {
+    height: fit-content;
+    position: static;
+  }
 }
