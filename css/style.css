@@ -167,13 +167,13 @@ p {
   margin-bottom: 49px;
 }
 .experience p:last-child {
-  color: rgba(0, 0, 0, 0.5);
+  color: #263036ac;
   /* opacity: 0.7; */
   transition: color 0.5s;
 }
 .experience p:last-child:hover {
   /* opacity: 1; */
-  color: rgba(0, 0, 0, 1);
+  color: #263036;
 }
 .skills {
   display: flex;
