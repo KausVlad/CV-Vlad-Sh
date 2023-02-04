@@ -1,5 +1,6 @@
 .my-theme {
   --color-main: #ce0000;
+  --color-main-transparent: #ce0000ac;
   --color-secondary: #00b188;
   --color-default-link-left-bar: #29e5b6;
   --color-left-bar-background: #ca9c87;

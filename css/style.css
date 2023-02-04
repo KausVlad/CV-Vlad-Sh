@@ -1,5 +1,6 @@
 .main-theme {
   --color-main: #263036;
+  --color-main-transparent: #263036ac;
   --color-secondary: #1e1e1e;
   --color-default-link-left-bar: #1c2e8c;
   --color-left-bar-background: #86a3b4;
@@ -167,13 +168,13 @@ p {
   margin-bottom: 49px;
 }
 .experience p:last-child {
-  color: #263036ac;
+  color: var(--color-main-transparent);
   /* opacity: 0.7; */
   transition: color 0.5s;
 }
 .experience p:last-child:hover {
   /* opacity: 1; */
-  color: #263036;
+  color: var(--color-main);
 }
 .skills {
   display: flex;
