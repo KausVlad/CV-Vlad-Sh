@@ -27,16 +27,16 @@
 }
 .left-bar {
   min-width: 300px;
-  overflow-y: scroll;
   position: sticky;
+  overflow: visible;
   top: 0px;
   height: 100vh;
   background-color: var(--color-left-bar-background);
   color: var(--color-main);
   box-shadow: 4px 0px 20px var(--color-main);
-  overflow: visible;
   z-index: 1;
 }
+
 .content {
   margin: 0 32px;
 }
