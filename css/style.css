@@ -35,6 +35,7 @@
   color: var(--color-main);
   box-shadow: 4px 0px 20px var(--color-main);
   overflow: visible;
+  z-index: 1;
 }
 .content {
   margin: 0 32px;
@@ -168,13 +169,13 @@ p {
   margin-bottom: 49px;
 }
 .experience p:last-child {
-  color: var(--color-main-transparent);
-  /* opacity: 0.7; */
-  transition: color 0.5s;
+  /* color: var(--color-main-transparent); */
+  opacity: 0.7;
+  /* transition: color 0.5s; */
 }
 .experience p:last-child:hover {
-  /* opacity: 1; */
-  color: var(--color-main);
+  opacity: 1;
+  /* color: var(--color-main); */
 }
 .skills {
   display: flex;
