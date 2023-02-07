@@ -28,6 +28,7 @@
 .left-bar {
   min-width: 300px;
   position: sticky;
+  /* overflow: scroll; */
   overflow: visible;
   top: 0px;
   height: 100vh;

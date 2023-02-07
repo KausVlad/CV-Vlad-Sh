@@ -128,7 +128,10 @@ textarea:focus {
 input[type='email']:required:invalid:focus {
   outline: 1px solid red;
 }
-input[type='email']:required:invalid:focus + .error {
+input[type='email']:required:invalid:focus ~ .error {
+  display: block;
+}
+input[type='email']:required:valid ~ .success {
   display: block;
 }
 .error {
@@ -143,4 +146,17 @@ input[type='email']:required:invalid:focus + .error {
   /* identical to box height */
   /* System/Red */
   color: #ed0131;
+}
+.success {
+  margin-top: 2px;
+  position: absolute;
+  display: none;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+  /* System/Red */
+  color: #0e6245;
 }
