@@ -3,17 +3,37 @@
   --grey2: #6f7482;
   --grey3: #b8bcca;
 }
+
 .container {
   height: fit-content;
-  width: 1024px;
-  /* max-width: 1024px; */
-  position: fixed;
+  /* width: 1024px; */
+  max-width: 1024px;
+  /* position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  /* margin: 0 auto; */
+  transform: translate(-50%, -50%); */
+  margin: 0 auto;
+  padding: 0 8px;
   font-family: 'IBM Plex Sans', sans-serif;
   color: var(--basic);
+  animation: formIni 0.7s ease-in-out;
+}
+body {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+@keyframes formIni {
+  from {
+    transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .href-to-main:hover {
   cursor: pointer;
