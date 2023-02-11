@@ -11,139 +11,50 @@
     .container {
       margin: 0 auto;
       display: flex;
-      /* flex-direction: column; */
       max-width: 1000px;
-      height: 100vh;
+      height: 2000px;
       background-color: aqua;
     }
     .left {
       min-width: 300px;
-      /* overflow-y: scroll; */
-      /* flex: 2 2 360px; */
-      position: sticky;
-      top: 0px;
-      height: 100vh;
-      flex-basis: 400px;
-      border-right: 4px solid black;
       background-color: blue;
-      
+
       /* flex-basis: 300px; */
+      animation: expand-left 0.6s ease-in-out;
+    }
+    @keyframes expand-left {
+      0% {
+        transform: translateY(50%);
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
     .right {
-      /* flex-basis: auto; */
-      /* flex: 1 1 auto; */
-      /* margin: 0 40px; */
-      /* width: 100%; */
-      /* min-width: 320px; */
+      flex: 1 1 auto;
       background-color: brown;
+
+      animation: expand 1.1s ease-in-out;
     }
-    /* @media screen and (max-width: 701px) {
-      .container {
-        flex-direction: column;
+    @keyframes expand {
+      0% {
+        transform: translateY(50%);
+        opacity: 0;
       }
-      .left {
-        position: static;
-        width: 100vw;
+      100% {
+        opacity: 1;
       }
-    } */
+    }
+    .x {
+      border: 1px solid transparent;
+    }
   </style>
   <body>
+    <div class="x"></div>
     <div class="container">
-      <div class="left">
-        <input id="toggle" type="checkbox" />
-        <h1 class="margin-left-40px save-margin-right">
-          <span class="name">Vladyslav</span>
-          <span class="surname">Shkarivskyi</span>
-        </h1>
-        <img
-          class="personal-photo"
-          src="./images/photo_2022-12-09_23-59-55.jpg"
-          alt="personal photo"
-        />
-
-        <h2 class="margin-left-40px save-margin-right">Contact</h2>
-        <ul class="contact-inf margin-left-40px save-margin-right">
-          <li>
-            <h3>Address</h3>
-            <p>Kyiv, Ukraine</p>
-          </li>
-          <li>
-            <h3>Phone</h3>
-            <p>+380987320688</p>
-          </li>
-
-          <li>
-            <h3>E-mail</h3>
-            <a href="mailto:kausvirtual@gmail.com">kausvirtual@gmail.com</a>
-          </li>
-          <li>
-            <h3>Linkedin</h3>
-            <a href="https://www.linkedin.com/in/kaus-virtual" target="_blank"
-              >www.linkedin.com/in/kaus-virtual</a
-            >
-          </li>
-          <li>
-            <a class="form-href" href="./Forms-HW6.html">Hire ➡ Me </a>
-          </li>
-        </ul>
-        <h2 class="margin-left-40px save-margin-right">Languages</h2>
-        <ul class="languages margin-left-40px save-margin-right">
-          <li>Ukrainian - C2</li>
-          <li>English - B1</li>
-        </ul>
-      </div>
-      <div class="right"><h2 class="margin-top-58px">Summary</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
-          nesciunt doloribus vel, cupiditate exercitationem corporis, beatae
-          maiores dolorum corrupti tempore placeat odit ex laboriosam? Amet et
-          fugit porro voluptatem sed. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Vitae, magnam. Totam facere dolorem praesentium
-          officiis quam. Dolor, sunt earum. Laboriosam, praesentium? Illo
-          facilis tenetur quidem minus impedit non vel similique.
-        </p>
-        <h2>Skills highlights (WIP)</h2>
-        <div class="skills">
-          <ul>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>React</li>
-          </ul>
-          <ul>
-            <li>React Native</li>
-            <li>Redux</li>
-            <li>Node.js</li>
-            <li>Git</li>
-          </ul>
-        </div>
-        <h2>Work Experience</h2>
-        <div class="experience">
-          <p>
-            <span>Name of employer:</span> Lorem ipsum <br />
-            <span>Date of employment:</span> 05/2023 - present <br />
-            <span>Job title:</span> Junior Frontend Developer <br />
-            <span>Project/Role description:</span> Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Sed a at earum natus nemo et cum
-            incidunt eaque voluptatum hic cupiditate provident ex repellat,
-            voluptatibus perferendis adipisci vel ab reiciendis
-          </p>
-        </div>
-        <h2>Education</h2>
-        <p class="education">
-          <span>Dates of studying</span> 2015 - 2020 <br />
-          <span>Names of institution:</span> National Aviation University <br />
-          <span>Degree and major:</span> Master Degree Program Subject Area
-          Micro- and nano-system technology
-        </p>
-        <p style="font-size: 30px; line-height: 120px">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et
-          deserunt. Itaque molestias architecto facilis nam nesciunt, euue
-          moincidunt deleniti odio voluptatum hic? Ullam, provident numquam!
-          voluptatum hic? Ullam, provident numquam!m nulla fugit in delectus
-          incidunt deleniti odio voluptatum hic? Ullam, provident numquam!
-        </p>
-      </div></div>
+      <div class="left"></div>
+      <div class="right"></div>
     </div>
   </body>
 </html>
