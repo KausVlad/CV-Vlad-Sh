@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="icon" type="image/x-icon" href="../images/forms.png" />
+    <link rel="stylesheet" href="../css/reset-copy.css" />
+    <!-- <link rel="stylesheet" href="./output.css" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="max-w-screen-lg mx-auto px-2 font-sans">
+      <a class="my-6 block cursor-pointer hover:underline" href="./index.html"
+        >Go to ➡ Main page
+      </a>
+      <h1 class="text-3xl font-semibold mb-8">Hire me</h1>
+      <h3 class="mb-2 text-2xl font-medium">Contact information</h3>
+      <table class="mb-8 font-medium border-indigo-900 border-2 border-dashed">
+        <tbody>
+          <tr class="border-indigo-900 border-2 border-dashed">
+            <th class="border-indigo-900 border-2 border-dashed p-4">Phone</th>
+            <td class="p-4">+380985759114 (not real)</td>
+          </tr>
+          <tr>
+            <th class="border-indigo-900 border-2 border-dashed p-4">Adders</th>
+            <td class="p-4">Somewhere in Uganda (absolute true)</td>
+          </tr>
+        </tbody>
+      </table>
+      <form action="./form-framework.html" method="get">
+        <fieldset class="border-indigo-900 border-2 border-dashed rounded p-4">
+          <legend class="text-2xl">Contact form</legend>
+          <div class="mb-8">
+            <label class="w-full block font-normal text-base mb-1" for="email"
+              >E-mail<span class="pl-1 text-red-600">*</span></label
+            >
+            <input
+              class="w-full block bg-gray-100 p-3 rounded"
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Enter the email!"
+            />
+            <!-- <p class="error">Error message</p>
+            <p class="success">Success massage</p> -->
+          </div>
+          <div class="mb-8">
+            <label
+              class="font-normal w-full block text-base mb-1"
+              for="description"
+              >Description:</label
+            >
+            <textarea
+              class="w-full block bg-gray-100 p-3 rounded"
+              name="description"
+              id="description"
+              placeholder="Hint text"
+            ></textarea>
+          </div>
+          <div class="mb-8">
+            <label
+              class="w-full block font-normal text-base mb-1"
+              for="work-type"
+              >Work Type</label
+            >
+            <select
+              class="bg-gray-100 p-3 w-full block rounded"
+              name="work-type"
+              id="work-type"
+            >
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Seasonal">Seasonal</option>
+              <option value="Temporary">Temporary</option>
+              <option value="Interns">Interns</option>
+              <option value="At-will">At-will</option>
+            </select>
+          </div>
+          <div class="mb-8">
+            <input
+              class="text-center w-24 h-8 bg-blue-700 text-white cursor-pointer rounded-md hover:bg-blue-500"
+              type="submit"
+              value="Hire me"
+            />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
