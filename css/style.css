@@ -224,7 +224,7 @@ a:link:hover {
   list-style: none;
 }
 .contact-inf li {
-  font-size: var(--font-size-li);
+  font-size: var(--font-size-li-p);
   margin-bottom: 36px;
   line-height: 19px;
 }
