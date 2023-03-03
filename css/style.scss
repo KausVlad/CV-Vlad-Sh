@@ -237,6 +237,7 @@ p {
   .left-bar {
     height: fit-content;
     position: static;
+    box-shadow: none;
   }
   .personal-photo:hover {
     transform: scale(1) translate(0);
