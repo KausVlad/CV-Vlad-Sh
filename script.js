@@ -19,3 +19,19 @@ toggle.addEventListener('change', function () {
 personalPhoto.addEventListener('click', function () {
   personalPhoto.classList.toggle('personal-photo-hover');
 });
+
+function idWarpPage(button) {
+  document.getElementById(button).scrollIntoView({ behavior: 'smooth' });
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.code === 'KeyA') {
+    idWarpPage('KeyA');
+  } else if (e.code === 'KeyB') {
+    idWarpPage('KeyB');
+  } else if (e.code === 'KeyC') {
+    idWarpPage('KeyC');
+  } else if (e.code === 'KeyD') {
+    idWarpPage('KeyD');
+  }
+});

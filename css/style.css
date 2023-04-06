@@ -116,6 +116,7 @@ textarea {
 }
 .content {
   margin: 0 32px;
+  margin-bottom: 1000px;
   animation: expand 0.77s ease-in-out;
 }
 .content h2 {
