@@ -5,6 +5,7 @@ const body = document.querySelector('body');
 const personalPhoto = document.querySelector('.personal-photo');
 
 const loader = document.getElementById('loader');
+const GITHUB_URL = 'https://api.github.com/users/KausVlad/repos';
 
 toggle.addEventListener('change', function () {
   console.log(toggle.checked);
@@ -39,10 +40,12 @@ document.addEventListener('keydown', function (e) {
 });
 
 async function getProjects() {
-  const response = await fetch('https://api.github.com/users/KausVlad/repos');
+  const response = await fetch(GITHUB_URL);
   const data = await response.json();
-  data.forEach((item) => {
-    loader.innerHTML += `<li><a href="${item.html_url}" target="_blank">${item.full_name}</a></li>`;
-  });
+  return !data.length
+    ? (loader.innerHTML = '<li>0 repos</li>')
+    : data.forEach((item) => {
+        loader.innerHTML += `<li><a href="${item.html_url}" target="_blank">${item.full_name}</a></li>`;
+      });
 }
 getProjects();
