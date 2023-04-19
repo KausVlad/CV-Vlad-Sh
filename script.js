@@ -4,6 +4,8 @@ const body = document.querySelector('body');
 
 const personalPhoto = document.querySelector('.personal-photo');
 
+const loader = document.getElementById('loader');
+
 toggle.addEventListener('change', function () {
   console.log(toggle.checked);
 
@@ -35,3 +37,12 @@ document.addEventListener('keydown', function (e) {
     idWarpPage('KeyD');
   }
 });
+
+async function getProjects() {
+  const response = await fetch('https://api.github.com/users/KausVlad/repos');
+  const data = await response.json();
+  data.forEach((item) => {
+    loader.innerHTML += `<li><a href="${item.html_url}" target="_blank">${item.full_name}</a></li>`;
+  });
+}
+getProjects();

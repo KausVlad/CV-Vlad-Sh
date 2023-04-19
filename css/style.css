@@ -116,7 +116,6 @@ textarea {
 }
 .content {
   margin: 0 32px;
-  margin-bottom: 1000px;
   animation: expand 0.77s ease-in-out;
 }
 .content h2 {
@@ -288,6 +287,14 @@ p {
 .education span {
   font-weight: 600;
   flex-direction: column;
+}
+
+#loader {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 140px;
+  margin-bottom: 49px;
 }
 
 @media screen and (max-width: 606px) {
