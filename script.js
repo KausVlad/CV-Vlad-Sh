@@ -5,7 +5,9 @@ const body = document.querySelector('body');
 const personalPhoto = document.querySelector('.personal-photo');
 
 const loader = document.getElementById('loader');
-const GITHUB_URL = 'https://api.github.com/users/KausVlad/repos';
+const GITHUB_URL_BASE = 'https://api.github.com';
+const GITHUB_USER = 'KausVlad';
+const GITHUB_TOKEN = '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';
 
 toggle.addEventListener('change', function () {
   console.log(toggle.checked);
@@ -39,13 +41,48 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-async function getProjects() {
-  const response = await fetch(GITHUB_URL);
-  const data = await response.json();
-  return !data.length
-    ? (loader.innerHTML = '<li>0 repos</li>')
-    : data.forEach((item) => {
-        loader.innerHTML += `<li><a href="${item.html_url}" target="_blank">${item.full_name}</a></li>`;
+class ApiWork {
+  constructor(baseUrl, loader, token, user) {
+    this.baseUrl = baseUrl;
+    this.loader = loader;
+    this.token = token;
+    this.user = user;
+    this.url = `${this.baseUrl}/users/${this.user}/repos`;
+  }
+  render(data) {
+    return !data.length
+      ? (this.loader.innerHTML = '<li>0 repos</li>')
+      : data.forEach((item) => {
+          this.loader.innerHTML += `<li><a href="${item.html_url}" target="_blank">${item.full_name}</a></li>`;
+        });
+  }
+  async getProjects() {
+    const response = await fetch(this.url);
+    const data = await response.json();
+    this.render(data);
+  }
+  async getRepos() {
+    try {
+      const response = await fetch(this.url, {
+        headers: {
+          Authorization: `Bearer  ${this.token}`,
+        },
       });
+      const data = await response.json();
+      this.render(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
-getProjects();
+
+const apiGitHub = new ApiWork(
+  GITHUB_URL_BASE,
+  loader,
+  GITHUB_TOKEN,
+  GITHUB_USER
+);
+
+// apiGitHub.getProjects();
+
+apiGitHub.getRepos(); //Не до кінця зрозумів що змінилося, але я так розумію ми отримали більше доступу
