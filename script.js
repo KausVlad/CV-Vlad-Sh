@@ -7,7 +7,7 @@ const personalPhoto = document.querySelector('.personal-photo');
 const loader = document.getElementById('loader');
 const GITHUB_URL_BASE = 'https://api.github.com';
 const GITHUB_USER = 'KausVlad';
-const GITHUB_TOKEN = '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';
+const GITHUB_TOKEN = 'в кабінеті користувача';
 
 toggle.addEventListener('change', function () {
   console.log(toggle.checked);
