@@ -250,3 +250,10 @@ p {
     box-shadow: none;
   }
 }
+.letter-frame {
+  display: inline-block;
+  border: 2px solid black;
+  padding: 2px;
+  margin-right: 13px;
+  font-weight: bold;
+}
